@@ -2,7 +2,7 @@
 
 La proposition pour ce séminaire (du 5 mai au 27 juin 2018) est de réaliser un sondage sur les outils et techniques utilisés dans le champ professionel du design, et de visualiser les résultats sous la forme d'un site web.
 
-L'une des inspirations de ce projet est le sondage "Design Tools Survey" réalisé en 2015 par Khoi Vinh. Ce nouveau sondage visera à obtenir des données qui reflètent davantage les pratiques en Suisse.
+L'une des inspirations de ce projet est le sondage "[Design Tools Survey](http://tools.subtraction.com/)" réalisé en 2015 par Khoi Vinh. Notre sondage visera à obtenir des données actualisées pour 2018, et qui reflètent davantage les pratiques en Suisse.
 
 ## Objectifs: 
 
@@ -11,5 +11,5 @@ L'une des inspirations de ce projet est le sondage "Design Tools Survey" réalis
 
 ## Résultat final
 
-Les données obtenues durant le sondage seront visualisé sous la forme d'un site web. Celui-ci sera conçu par les élèves, et hébergé sur la plateforme GitHub Pages.
+Les données obtenues durant le sondage seront visualisées sous la forme d'un site web. Celui-ci sera conçu par les élèves, et hébergé sur la plateforme GitHub Pages.
 
