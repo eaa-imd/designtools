@@ -4,7 +4,7 @@ La proposition pour ce séminaire (du 5 mai au 27 juin 2018) est de réaliser un
 
 L'une des inspirations de ce projet est le sondage "[Design Tools Survey](http://tools.subtraction.com/)" réalisé en 2015 par Khoi Vinh. Notre sondage visera à obtenir des données actualisées pour 2018, et qui reflètent davantage les pratiques en Suisse.
 
-## Objectifs: 
+## Objectifs
 
 - Mieux connaître l'offre des logiciels de conception graphique et de prototypage.
 - Assurer que les logiciels enseignés dans les écoles soient pertinents et en phase avec les pratiques sur le terrain.
