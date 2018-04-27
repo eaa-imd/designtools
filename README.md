@@ -9,7 +9,7 @@ L'une des inspirations de ce projet est le sondage "Design Tools Survey" réalis
 - Mieux connaître l'offre des logiciels de conception graphique et de prototypage.
 - Assurer que les logiciels enseignés dans les écoles soient pertinents et en phase avec les pratiques sur le terrain.
 
-## Résultat final
+## Résultat final
 
 Les données obtenues durant le sondage seront visualisé sous la forme d'un site web. Celui-ci sera conçu par les élèves, et hébergé sur la plateforme GitHub Pages.
 
