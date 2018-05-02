@@ -20,15 +20,13 @@ Accessoirement, ce projet permettra de:
 - Interagir avec des professionnels du graphisme.
 - Réaliser un projet qui pourra intéresser un large public.
 
-
 ## Critères d'évaluation
 
 La participation à ce séminaire fera l'objet d'une note. Les critères d'évaluation pour cette note seront les suivants:
 
-- Maîtrise des outils de conception web: démontrer dans votre travail la bonne utilisation des outils.
-- Connaissance des langages du web: 
-- Participation active au projet
-- Aptitudes de collaboration et communication: participation active sur les canaux de communication du projet.
+- Maîtrise des outils de conception web: démontrer dans votre travail la bonne utilisation des outils (éditeurs graphiques, éditeurs de code).
+- Connaissance des langages du web: produire un code répondant aux bonnes pratiques.
+- Aptitudes de collaboration et communication: participer activement sur les canaux de communication du projet.
 
 ## Autres informations
 
