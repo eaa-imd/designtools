@@ -9,5 +9,7 @@ Le planning:
 - VE 01.06 - Explicatifs Git/Github - conception graphique + web.
 - VE 08.06 - Conception html/css.
 - VE 15.06 - Conception html/css - documentation, promotion.
-- VE 22.06 - À définir selon les besoins.
-- ME 27.06 - Session finale, debrief. Rédaction de case-study, vidéo de documentation.
+- VE 22.06 - Session finale, debrief. Rédaction de case-study, vidéo de documentation.
+- ME 27.06 - (à vérifier - semaine workshop?)
+
+Total: 
