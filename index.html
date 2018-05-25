@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>i don't know how to name this website</title>
+     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900" rel="stylesheet">
     <style>
     .waitforit{
       text-align: center;
@@ -11,6 +12,8 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      background: linear-gradient(90deg, #9CFFC5 0%, #BEDCFF 100%);
     }
     .gif-bg {
       background:url('') no-repeat center center;
@@ -19,22 +22,18 @@
       background-size:cover;
       margin: auto;
     }
+    h1{
+      font-weight: 400;
+    }
+
     </style>
   </head>
   <body>
     <div class="waitforit">
-      <h1>Les resultats du sondage pour les programmes de design seront publie fin juin</h1>
+      <h1>Les résultats du sondage pour les programmes de design seront publiés fin juin.</h1>
     </div>
   </body>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>
-    $(function() {
-      var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC");
-      xhr.done(function(data) {
-        $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
-      });
-    });
-    </script>
+
     <div class="waitforit">
     <h1>Il vous faut attendre encore</h1>
     <!-- Display the countdown timer in an element -->
