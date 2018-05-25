@@ -10,6 +10,3 @@ Le planning:
 - VE 08.06 - Conception html/css.
 - VE 15.06 - Conception html/css - documentation, promotion.
 - VE 22.06 - Session finale, debrief. Rédaction de case-study, vidéo de documentation.
-- ME 27.06 - (à vérifier - semaine workshop?)
-
-Total: 
