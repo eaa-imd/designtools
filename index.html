@@ -6,7 +6,18 @@
     <style>
     .waitforit{
       text-align: center;
-      padding-top: 20%;
+      padding-top: 1%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .gif-bg {
+      background:url('') no-repeat center center;
+      height: 550px;
+      width: 550px;
+      background-size:cover;
+      margin: auto;
     }
     </style>
   </head>
@@ -15,4 +26,51 @@
       <h1>Les resultats du sondage pour les programmes de design seront publie fin juin</h1>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+    $(function() {
+      var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC");
+      xhr.done(function(data) {
+        $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
+      });
+    });
+    </script>
+    <div class="waitforit">
+    <h1>Il vous faut attendre encore</h1>
+    <!-- Display the countdown timer in an element -->
+  <h1 id="demo"></h1>
+
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("June 28, 2018 15:37:25").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+    <h1>;)</h1>
+  </div>
+  <div class="gif-bg"></div>
 </html>
