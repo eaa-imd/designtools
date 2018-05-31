@@ -28,7 +28,7 @@
 
     <h1>Il vous faut attendre encore</h1>
     <!-- Display the countdown timer in an element -->
-  <h1 id="demo"></h1>
+  <h1 id="demo">28j 12h 00m 00s</h1>
 
   <script>
   // Set the date we're counting down to
@@ -50,7 +50,7 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    document.getElementById("demo").innerHTML = days + "j " + hours + "h "
     + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
