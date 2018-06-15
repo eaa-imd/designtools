@@ -2,12 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Chivo:700');
 
-body{
-	padding: 0px;
+body
+{
+	padding: 1em;
 	margin: 0px;
-	background-color: #FAF22F; 
+	background: linear-gradient(to bottom,  #FAF22F, #FAF22F 4em, #fff 4em, #fff 75%);
 	font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "sans-serif";		
 }
+
+@media screen and (min-width: 600px) {
+	
+	body
+	{
+	background: linear-gradient(to bottom,  #FAF22F, #FAF22F 7em, #fff 7em, #fff 75%);		
+	}
+
+}
+ 
 
 /* style global */
 
@@ -16,18 +27,94 @@ h1, h2
 	font-family: 'Chivo', sans-serif;
 }
 
-/* header */
-
-.site-header
+h2
 {
+	border-bottom: 6px solid black;
+	padding-bottom: 10px;	
+}
+
+@media screen and (min-width: 600px) {
+	h2
+	{
+	border-bottom: 6px solid black;
+	padding-bottom: 10px;
+	font-size: 60px;
+	}
+	
 	
 }
 
+
+/* header */
+
+.site-header h1
+{
+	font-size: 1em;
+	text-align: center;
+
+	
+}
+
+@media screen and (min-width: 600px) {
+	.site-header h1
+	{
+		font-size: 2em;
+		
+	}
+	
+	
+}
+
+.main-nav
+{
+	position: fixed;
+	top:2em;
+}
 /* section */
 
 .section
 {
+	max-width: 70em;
+	margin: auto;
+ 	border: 1px solid;	
+}
+
+/*pages tasks*/
+
+/*graphes*/
+
+.visuel
+{
+	max-width: 80vmin;
+}
+
+.legende
+{
+	margin: auto;
+	list-style-type: none;
 	
+}
+
+.legende li
+{
+	padding-left: 60px;
+	padding-top: 8px ;
+	
+	
+	
+}
+
+@media screen and (min-width: 600px) {
+	.graphe
+	{
+		display:flex;
+	}
+	
+	.legende
+	{
+		min-width: 20em;
+	}
+  
 }
 
 /*nav*/
@@ -55,18 +142,39 @@ h1, h2
   cursor:pointer;
 }
 
-
 .bar
 {
-  width: 60px; height: 5px;
-  background-color: #fff;
-  margin: 5px 0;
+  width: 30px; height: 3px;
+  background-color: black;
+  margin: 0px 0;
   position:absolute;
 }
 
 .icon .bar.one {top: 0; left: 0; }
-.icon .bar.two {top: 10px; left: 0; }
-.icon .bar.three {top: 20px; left: 0; }
+.icon .bar.two {top: 7px; left: 0; }
+.icon .bar.three {top: 14px; left: 0; }
+
+
+@media screen and (min-width: 600px) {
+	.bar
+	{
+		width: 50px; height: 5px;
+  		margin: 14px 0; 
+	}
+	
+	.icon .bar.two 
+	{
+		top: 10px; left: 0; 
+	}
+	
+	.icon .bar.three 
+	{
+		top: 20px; left: 0; 
+	}
+
+}
+ 
+
 
 .icon .bar.one.active
 {
