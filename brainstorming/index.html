@@ -49,7 +49,7 @@
 
 <section class="section description">
 	<h2>Brainstorming</h2>
-	<p>Un brainstorming, est une technique formalisée de résolution créative de problème sous la direction d'un animateur.
+	<p class="texte-description">Un brainstorming, est une technique formalisée de résolution créative de problème sous la direction d'un animateur.
 
 La technique du brainstorming a été conçue et a commencé à être développée en 1939 par Alex Osborn, vice-président de l'agence de publicité américaine BBDO.
 
@@ -81,6 +81,13 @@ Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion
 </footer>
 
   <script>
+	
+	  var largeur=80;
+	  
+  if (screen.width >= 600) {
+	  var largeur=160;
+}
+
 
   new Chartist.Pie('.ct-chart', {
 
@@ -88,7 +95,7 @@ Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion
      series: seriesBrain
   }, {
     donut: true,
-    donutWidth: 80,
+    donutWidth: largeur,
     donutSolid: true,
     startAngle: 270,
     showLabel: true
