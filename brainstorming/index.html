@@ -1,22 +1,54 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Design Tools Survey</title>
-<link rel="stylesheet" href="../libs/chartist/chartist.min.css">
-    <script src="../libs/chartist/chartist.min.js"></script>
-    <script src="../js/fonctions.js"></script>
-    <script src="data-brain.js"></script>
+   <meta charset="UTF-8">
+   <title>Design Tools Survey</title>
+   <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+   <script src="../libs/chartist/chartist.min.js"></script>
+   <script src="../js/fonctions.js"></script>
+   <script src="data-brain.js"></script>
 </head>
 
 <body>
 
-<header>
-<nav></nav>
+<header class=" site-header">
+
+<h1>Design Tools Survey</h1>
+<nav class="main-nav">
+
+<label for="menu-toggle"><div class="wrap">
+<div class="icon-wrapper">
+	<div class="icon">
+		<div class="bar one"></div>
+		<div class="bar two"></div>
+		<div class="bar three"></div>
+	</div>
+</div>
+</div></label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu" class="menu">
+  <li><a href="#">tasks</a></li>
+  	<ul class="sous-menu">
+  		<li><a href="brainstorming/index.html">brainstorming</a></li>
+  		<li><a href="#">wireframing</a></li>
+  		<li><a href="#">design d'interface</a></li>
+  		<li><a href="#">prototypage</a></li>
+  		<li><a href="#">édition de code</a></li>
+  		<li><a href="#">CMS/frameworks</a></li>
+  		<li><a href="#">gestion de versions et de fichiers</a></li>
+  		<li><a href="#">systèmes de design</a></li>
+ 		 <li><a href="#">communication</a></li>
+ 	 </ul>
+  <li><a href="#">toolbax</a></li>
+  <li><a href="#">participants</a></li>
+</ul>
+	
+</nav>
 </header>
 
-<section class="section-1">
-	<h1>Brainstorming</h1>
+<section class="section description">
+	<h2>Brainstorming</h2>
 	<p>Un brainstorming, est une technique formalisée de résolution créative de problème sous la direction d'un animateur.
 
 La technique du brainstorming a été conçue et a commencé à être développée en 1939 par Alex Osborn, vice-président de l'agence de publicité américaine BBDO.
@@ -28,19 +60,24 @@ C'est une technique controversée. Pour certains, c'est un mythe comme l'a écri
 Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion informelle ludique de collecte d'idées ou, pour les enfants, un casse-tête.</p>
 </section>
 
-<section class="section-2">
-	<div class="ct-chart ct-square"></div>
+<section class="section graphe">
+	<div class="ct-chart ct-square visuel"></div>
+	<ul class="legende">
+	<li>élément 1</li>
+	<li>élément 2</li>
+	<li>élément 3</li>
+	</ul>
 </section>
 
-<section class="section-3">
+<section class="section graphe-2">
 	<div class="ct-chart-2 ct-square"></div>
 </section>
 
-<section class="section-4">
+<section class=" nav-tasks">
 	<p>navigation entre tâches</p>
 </section>
 
-<footer>
+<footer  class="section site-footer">
 </footer>
 
   <script>
