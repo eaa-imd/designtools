@@ -1,3 +1,5 @@
+jQuery( document ).ready( function( $ ) { 
+
 $(".icon").click(ain);
 
 function ain() {
@@ -9,3 +11,5 @@ function ain() {
     $(".icon .bar").addClass("active");
   }
 }
+
+});
