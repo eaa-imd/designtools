@@ -62,9 +62,22 @@ h2
 	
 }
 
+/* section */
 
+.section
+{
+	max-width: 80em;
+	margin: auto;
+	margin-top: 100px;
+ 	/*border: 1px solid;*/
+	
+}
 
 /* header */
+
+.site-header {
+	margin-top: 0;
+}
 
 .site-header h1
 {
@@ -89,16 +102,7 @@ h2
 	position: fixed;
 	top:2em;
 }
-/* section */
 
-.section
-{
-	max-width: 80em;
-	margin: auto;
-	margin-top: 100px;
- 	/*border: 1px solid;*/
-	
-}
 
 /*pages tasks*/
 
