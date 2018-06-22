@@ -37,21 +37,34 @@ function ProduceMenu() {
 
 function InsertMenu() {
 
-  var menuContainer = document.getElementsByClassName("auto-menu");
+  var menuContainer = document.getElementById("main-nav");
 
-  var menuContent = ProduceMenu();
+   var menuContent = `<label for="menu-toggle"><div class="wrap">
+<div class="icon-wrapper">
+  <div class="icon">
+    <div class="bar one"></div>
+    <div class="bar two"></div>
+    <div class="bar three"></div>
+  </div>
+</div>
+</div></label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu" class="menu">
+  <li class="auto-menu"><a href="#">tasks</a>
+  <ul class="menu-tasks">`;
 
-  for (var i = 0; i < menuContainer.length; i++) {
-      
-      var pageListUL = document.createElement("ul");
-      pageListUL.className = "menu-tasks";
-      pageListUL.innerHTML = menuContent;
-  
-      // on insère les contenus
+  menuContent += ProduceMenu();
 
-      menuContainer[i].appendChild(pageListUL);
+  menuContent += `</ul>
 
-  }
+  </li>
+    
+  <li><a href="#">toolbax</a></li>
+  <li><a href="#">participants</a></li>
+</ul>`;
+
+
+ menuContainer.innerHTML = menuContent;
 
 }
 
