@@ -1,69 +1,105 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Design Tools Survey</title>
-<link rel="stylesheet" href="../libs/chartist/chartist.min.css">
-    <script src="../libs/chartist/chartist.min.js"></script>
-    <script src="../js/fonctions.js"></script>
-    <script src="data-pays.js"></script>
-    
-    
+   <meta charset="UTF-8">
+   <title>Design Tools Survey</title>
+   <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+   <link rel="stylesheet" href="../css/base.css">
+   <script src="../libs/chartist/chartist.min.js"></script>
+   <script src="../js/fonctions.js"></script>
+   <script src="../js/menu.js"></script>
+   <script src="../js/graph.js"></script>
+   <script src="data-brain.js"></script>
 </head>
 
 <body>
 
-<header>
-<nav></nav>
+<header class=" site-header">
+
+<h1>Design Tools Survey</h1>
+<nav class="main-nav">
+
+<label for="menu-toggle"><div class="wrap">
+<div class="icon-wrapper">
+	<div class="icon">
+		<div class="bar one"></div>
+		<div class="bar two"></div>
+		<div class="bar three"></div>
+	</div>
+</div>
+</div></label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu" class="menu">
+  <li class="auto-menu"><a href="#">tasks</a></li>
+  	
+  <li><a href="#">toolbax</a></li>
+  <li><a href="#">participants</a></li>
+</ul>
+	
+</nav>
 </header>
 
-<section class="section-1">
-	<h1>tâche</h1>
-	<p>description</p>
+<section class="section description">
+	<h2>Brainstorming</h2>
+	<p class="texte-description">Un brainstorming, est une technique formalisée de résolution créative de problème sous la direction d'un animateur.
+
+La technique du brainstorming a été conçue et a commencé à être développée en 1939 par Alex Osborn, vice-président de l'agence de publicité américaine BBDO.
+
+C'était à l'origine une méthode de réunion de groupe soigneusement préparée puis tout aussi soigneusement exploitée pour trouver un nombre important d'idées publicitaire et promotionnelles pour les clients et ceux potentiels de l'agence3.
+
+C'est une technique controversée. Pour certains, c'est un mythe comme l'a écrit Jonah Lehrer dans un article sur le GroupThink publié par The New Yorker en 2012.
+
+Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion informelle ludique de collecte d'idées ou, pour les enfants, un casse-tête.</p>
 </section>
 
-<section class="section-2">
-	<div class="ct-chart ct-square"></div>
+<section class="section graphe">
+	<div class="ct-chart ct-square visuel"></div>
+	<div class="legende" id="legende">
+</div>
 </section>
 
-<section class="section-3">
+<section class="section graphe-2">
 	<div class="ct-chart-2 ct-square"></div>
 </section>
 
-<section class="section-4">
+<section class=" nav-tasks">
 	<p>navigation entre tâches</p>
 </section>
 
-<footer>
+<footer  class="section site-footer">
 </footer>
 
   <script>
+	
+	  var largeur=80;
+	  
+  // if (screen.width >= 600) {
+	 //  var largeur=120;
+  // }
+
+  // if (screen.width >= 900) {
+  //   var largeur=160;
+  // }
+
 
   new Chartist.Pie('.ct-chart', {
 
-     labels: labelsPays,
-     series: seriesPays
+     labels: labelsBrain,
+     series: seriesBrain
   }, {
     donut: true,
-    donutWidth: 80,
+    donutWidth: largeur,
     donutSolid: true,
     startAngle: 270,
     showLabel: true
   });
-	  
-	  
-	  
-  new Chartist.Pie('.ct-chart-2', {
 
-     labels: labelsPays,
-     series: seriesPays
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
+  // produire une liste legendeUL
+
+
+  legendeAutomatique(dataBrain);
+ 
+
 
   </script>
 </body>
