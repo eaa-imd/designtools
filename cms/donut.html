@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>My first Chartist Tests</title>
-    <link rel="stylesheet" href="dist/chartist.min.css">
-    <script src="dist/chartist.min.js"></script>
-    <script src="data-pays.js"></script>
+    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <script src="../libs/chartist/chartist.min.js"></script>
+    <script src="../js/fonctions.js"></script>
+    <script src="data-cms.js"></script>
     <style>
-
+      
       body {
 /*        font-family: Arial, sans-serif;
 */      }
@@ -25,8 +26,8 @@
 
   new Chartist.Pie('.ct-chart', {
 
-     labels: labelsPays,
-     series: seriesPays
+     labels: labelsCms,
+     series: seriesCms
   }, {
     donut: true,
     donutWidth: 80,

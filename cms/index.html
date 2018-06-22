@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Design Tools Survey</title>
+<link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <script src="../libs/chartist/chartist.min.js"></script>
+    <script src="../js/fonctions.js"></script>
+    <script src="data-pays.js"></script>
+    
+    
+</head>
+
+<body>
+
+<header>
+<nav></nav>
+</header>
+
+<section class="section-1">
+	<h1>CMS</h1>
+	<p>description</p>
+</section>
+
+<section class="section-2">
+	<div class="ct-chart ct-square"></div>
+</section>
+
+<section class="section-3">
+	<div class="ct-chart-2 ct-square"></div>
+</section>
+
+<section class="section-4">
+	<p>navigation entre tâches</p>
+</section>
+
+<footer>
+</footer>
+
+  <script>
+
+  new Chartist.Pie('.ct-chart', {
+
+     labels: labelsPays,
+     series: seriesPays
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+	  
+	  
+	  
+  new Chartist.Pie('.ct-chart-2', {
+
+     labels: labelsPays,
+     series: seriesPays
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+
+  </script>
+</body>
+</html>
