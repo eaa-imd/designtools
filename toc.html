@@ -7,6 +7,13 @@
  <script defer src="js/jquery-3.2.1.min.js"></script>
  <script defer src="js/base.js"></script>
  <script defer src="js/menu.js"></script>
+ <link rel="stylesheet" href="libs/chartist/chartist.min.css">
+ <script src="libs/chartist/chartist.min.js"></script>
+ <script src="js/fonctions.js"></script>
+ <script src="participants/data-participants.js"></script>
+
+
+ </script>
 </head>
 
 <body>
@@ -26,17 +33,17 @@
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
   <li class="auto-menu"><a href="#">tasks</a></li>
-  		
+
   <li><a href="#">toolbax</a></li>
   <li><a href="#">participants</a></li>
 </ul>
-	
+
 </nav>
 </header>
 
 
 <section class="section intro">
-	
+
 	<p>texte explicatif</p>
 </section>
 
@@ -51,6 +58,52 @@
 </section>
 <section class="section participants">
 	<h2>participants</h2>
+  <div class="ct-chart ct-square ct-chart-1"></div>
+  <div class="ct-chart ct-square ct-chart-2"></div>
+  <div class="ct-chart ct-square ct-chart-3"></div>
+
+  <script>
+
+  new Chartist.Pie('.ct-chart-1', {
+
+     labels: labelsPays,
+     series: seriesPays
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+
+
+
+  new Chartist.Pie('.ct-chart-2', {
+
+     labels: labelsCompany,
+     series: seriesCompany
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+
+
+  new Chartist.Pie('.ct-chart-3', {
+
+     labels: labelsAges,
+     series: seriesAges
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+
+  </script>
 </section>
 
 <footer class="section site-footer">
