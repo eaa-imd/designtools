@@ -27,7 +27,7 @@ function ProduceMenu() {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><img src="images/icones/' +Projet[1]+ '.svg"/><a href="' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
+    navProjMenu += '<li><a href="' +Projet[1]+ '"><img src="images/icones/' +Projet[1]+ '.svg"/><div>' +Projet[0]+ '</div></a></li>';
 
   }
 
