@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <title>Design Tools Survey</title>
 <link href="css/base.css" rel="stylesheet" type="text/css">
- <script src="js/jquery-3.2.1.min.js"></script>
- <script src="js/base.js"></script>
+ <script defer src="js/jquery-3.2.1.min.js"></script>
+ <script defer src="js/base.js"></script>
+ <script defer src="js/menu.js"></script>
 </head>
 
 <body>
@@ -24,18 +25,8 @@
 </label>
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
-  <li><a href="#">tasks</a></li>
-  	<ul class="sous-menu">
-  		<li><a href="brainstorming/index.html">brainstorming</a></li>
-  		<li><a href="#">wireframing</a></li>
-  		<li><a href="#">design d'interface</a></li>
-  		<li><a href="#">prototypage</a></li>
-  		<li><a href="#">édition de code</a></li>
-  		<li><a href="#">CMS/frameworks</a></li>
-  		<li><a href="#">gestion de versions et de fichiers</a></li>
-  		<li><a href="#">systèmes de design</a></li>
- 		 <li><a href="#">communication</a></li>
- 	 </ul>
+  <li class="auto-menu"><a href="#">tasks</a></li>
+  		
   <li><a href="#">toolbax</a></li>
   <li><a href="#">participants</a></li>
 </ul>
@@ -51,15 +42,8 @@
 
 <section class="section tasks">
 	<h2>designer's tasks</h2>
-	<a href="#">brainstorming</a>
-	<a href="#">wireframing</a>
-	<a href="#">design d'interface</a>
-	<a href="#">prototypage</a>
-	<a href="#">édition de code</a>
-	<a href="#">CMS/frameworks</a>
-	<a href="#">gestion de versions et de fichiers</a>
-	<a href="#">systèmes de design</a>
-	<a href="#">communication</a>
+	<div class="auto-menu">
+  </div>
 </section>
 
 <section class="section toolbox">
