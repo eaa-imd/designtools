@@ -29,12 +29,16 @@
 {
 	display: block;
 	text-align: center;
-	height: 13em;
 	padding: 2em;
-/*	width: 3em;
+	/*width: 3em;
 	height: 3em;*/
 /*	border: 1px solid yellow;
 	background-color: #86F9FF;*/
+}
+
+.menu-tasks ul, img
+{
+	width: 15em;
 }
 
 .menu-tasks a
