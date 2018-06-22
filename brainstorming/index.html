@@ -4,9 +4,11 @@
    <meta charset="UTF-8">
    <title>Design Tools Survey</title>
    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
-    <link rel="stylesheet" href="../css/base.css">
+   <link rel="stylesheet" href="../css/base.css">
    <script src="../libs/chartist/chartist.min.js"></script>
    <script src="../js/fonctions.js"></script>
+   <script src="../js/menu.js"></script>
+   <script src="../js/graph.js"></script>
    <script src="data-brain.js"></script>
 </head>
 
@@ -28,18 +30,8 @@
 </div></label>
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
-  <li><a href="#">tasks</a></li>
-  	<ul class="sous-menu">
-  		<li><a href="brainstorming/index.html">brainstorming</a></li>
-  		<li><a href="#">wireframing</a></li>
-  		<li><a href="#">design d'interface</a></li>
-  		<li><a href="#">prototypage</a></li>
-  		<li><a href="#">édition de code</a></li>
-  		<li><a href="#">CMS/frameworks</a></li>
-  		<li><a href="#">gestion de versions et de fichiers</a></li>
-  		<li><a href="#">systèmes de design</a></li>
- 		 <li><a href="#">communication</a></li>
- 	 </ul>
+  <li class="auto-menu"><a href="#">tasks</a></li>
+  	
   <li><a href="#">toolbax</a></li>
   <li><a href="#">participants</a></li>
 </ul>
@@ -62,11 +54,13 @@ Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion
 
 <section class="section graphe">
 	<div class="ct-chart ct-square visuel"></div>
-	<ul class="legende">
-	<li>élément 1</li>
-	<li>élément 2</li>
-	<li>élément 3</li>
-	</ul>
+	<div class="legende" id="legende">
+    <ul class="liste-legende">
+    	<li>élément 1</li>
+    	<li>élément 2</li>
+    	<li>élément 3</li>
+  	</ul>
+</div>
 </section>
 
 <section class="section graphe-2">
@@ -84,9 +78,13 @@ Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion
 	
 	  var largeur=80;
 	  
-  if (screen.width >= 600) {
-	  var largeur=160;
-}
+  // if (screen.width >= 600) {
+	 //  var largeur=120;
+  // }
+
+  // if (screen.width >= 900) {
+  //   var largeur=160;
+  // }
 
 
   new Chartist.Pie('.ct-chart', {
@@ -100,6 +98,13 @@ Un « remue-méninges » est, par ailleurs, et plus spécifiquement une réunion
     startAngle: 270,
     showLabel: true
   });
+
+  // produire une liste legendeUL
+
+
+  legendeAutomatique(dataBrain);
+ 
+
 
   </script>
 </body>

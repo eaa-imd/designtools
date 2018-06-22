@@ -5,20 +5,20 @@
   max-width: 80vmin;
 }
 
-.legende
-{
+.legende {
   margin: auto;
+}
+
+.legende ul
+{
   list-style-type: none;
-  
+  padding: 0;
 }
 
 .legende li
 {
   padding-left: 60px;
   padding-top: 8px ;
-  
-  
-  
 }
 
 @media screen and (min-width: 600px) {
@@ -26,10 +26,15 @@
   {
     display:flex;
   }
+
+  .visuel {
+
+  }
   
   .legende
   {
-    min-width: 20em;
+/*    min-width: 20em;
+*/    flex: 0 0 20em;
   }
   
 }
