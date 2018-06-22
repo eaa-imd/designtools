@@ -37,18 +37,19 @@ function ProduceMenu() {
 
 function InsertMenu() {
 
-  var PageList = document.getElementsByClassName("auto-menu");
+  var menuContainer = document.getElementsByClassName("auto-menu");
 
-  var MenuContent = ProduceMenu();
+  var menuContent = ProduceMenu();
 
-  for (var i = 0; i < PageList.length; i++) {
+  for (var i = 0; i < menuContainer.length; i++) {
       
-      var navProjUL = document.createElement("ul");
-      navProjUL.innerHTML = MenuContent;
+      var pageListUL = document.createElement("ul");
+      pageListUL.className = "menu-tasks";
+      pageListUL.innerHTML = menuContent;
   
       // on insère les contenus
 
-      PageList[i].appendChild(navProjUL);
+      menuContainer[i].appendChild(pageListUL);
 
   }
 

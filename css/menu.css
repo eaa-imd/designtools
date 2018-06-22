@@ -1,28 +1,50 @@
 /*nav*/
 
+.main-nav {
+	width: 100%;
+}
+
 .menu {
 	background-color: #fff;
 	width: 100%;
+	border: 1px solid blue;
+	margin-left: -1em;
 }
 
-.wrap
-{
-	display:table;
-	width: 100%;
-	height: 100%;
+.menu-tasks {
+	display: grid;
+	padding: 0;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.icon-wrapper
-{
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+.menu-tasks li {
+	display: block;
+/*	width: 3em;
+	height: 3em;*/
+	border: 1px solid green;
+	background-color: lime;
 }
+
+.menu-tasks a {
+	display: block;
+	min-height: 3em;
+	padding: 0.5em;
+/*	width: 10px;
+	height: 10px;*/
+	border: 1px solid red;
+	/*background-color: red;*/
+	background-image: url("../images/icones/design-interface.svg");
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
 
 .icon
 {
   position: relative;
-  width: 60px; height: 50px;
+  width: 60px; 
+  height: 50px;
   display:inline-block;
   cursor:pointer;
 }
