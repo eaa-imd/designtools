@@ -14,7 +14,7 @@
 .menu-tasks {
 	display: grid;
 	padding: 0;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 768px)
@@ -38,8 +38,17 @@
 
 .menu-tasks ul, img
 {
-	width: 10em;
-	height: 10em;
+	width: 5em;
+	height: 5em;
+}
+
+@media screen and (min-width: 768px)
+{
+	.menu-tasks ul, img
+	{
+		width: 10em;
+		height: 10em;
+	}
 }
 
 .menu-tasks a
