@@ -96,4 +96,9 @@ h2
 {
 	display:flex;
 }
+	
+	.ct-chart-2,.ct-chart-3
+	{
+		margin-left:10%;
+	}
 }
