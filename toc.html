@@ -42,7 +42,7 @@
 
 <section class="section tasks">
 	<h2>designer's tasks</h2>
-	<div class="auto-menu">
+	<div id="tasks">
   </div>
 </section>
 
@@ -57,7 +57,24 @@
 	<p>un projet réalisé par les éléves de l'EAA de La Chaux-de-Fonds</p>
 </footer>
 
+<script>
 
+  // Insérer les Tasks
 
+  function TaskMenu() {
+
+    var menuContent = ProduceMenu();
+
+    var pageListUL = document.createElement("ul");
+    pageListUL.className = "menu-tasks";
+    pageListUL.innerHTML = menuContent;
+
+    document.getElementById("tasks").appendChild(pageListUL);
+
+  }
+
+  window.addEventListener("load", TaskMenu, false);
+  
+</script>
 </body>
 </html>
