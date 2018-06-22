@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My first Chartist Tests</title>
+    <title>Design Tools Survey</title>
     <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <link rel="stylesheet" href="../css/base.css">
     <script src="../libs/chartist/chartist.min.js"></script>
     <script src="../js/fonctions.js"></script>
-    <script src="interface.js"></script>
+    <script src="../js/menu.js"></script>
+    
     <style>
       
       body {
@@ -18,19 +20,35 @@
     </style>
   </head>
   <body>
-  <div class="ct-chart ct-square"></div>
+    <header class=" site-header">
+
+      <h1>Design Tools Survey</h1>
+      <nav class="main-nav" id="main-nav"></nav>
+      
+    </header>
+
+    <section class="section graphe">
+  <div class="ct-chart ct-square visuel"></div>
+  <div class="legende" id="legende">
+</div>
+</section>
 
   <script>
-  new Chartist.Pie('.ct-chart', {
-     labels: labelsPays,
-     series: seriesPays
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
+
+    var dataArray = [
+  [ 'Adobe XD', 13  ],
+  [ 'Affinity Designer',   1  ],
+  [ 'Divi',   1 ],
+  [ 'Figma',   3 ],
+  [ 'HTML / CSS',   10 ],
+  [ 'Illustrator',   12 ],
+  [ 'InDesign',   7 ],
+  [ 'Photoshop',   14 ],
+  [ 'Sketch',   7 ],
+  ];
+
+
   </script>
+  <script src="../js/graph.js"></script>
 </body>
 </html>

@@ -3,22 +3,22 @@
 <head>
    <meta charset="UTF-8">
    <title>Design Tools Survey</title>
+	<!-- feuilles de style -->
    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
    <link rel="stylesheet" href="../css/base.css">
+   	<!-- scripts -->
    <script src="../libs/chartist/chartist.min.js"></script>
+   <script defer src="../js/jquery-3.2.1.min.js"></script>
+   <script defer src="../js/base.js"></script>
    <script src="../js/fonctions.js"></script>
    <script src="../js/menu.js"></script>
-   <script src="../js/graph.js"></script>
-   <script src="data-brain.js"></script>
 </head>
 
 <body>
 
 <header class=" site-header">
-
-<h1>Design Tools Survey</h1>
+  <h1>Design Tools Survey</h1>
 	<nav class="main-nav" id="main-nav"></nav>
-  
 </header>
 
 <section class="section description">
@@ -28,10 +28,8 @@
 
 <section class="section graphe">
 	<div class="ct-chart ct-square visuel"></div>
-	<div class="legende" id="legende">
-</div>
+	<div class="legende" id="legende"></div>
 </section>
-
 
 <section class=" nav-tasks">
 	<p>communication</p>
@@ -42,37 +40,23 @@
 </footer>
 
   <script>
-	
-	  var largeur=80;
-	  
-  // if (screen.width >= 600) {
-	 //  var largeur=120;
-  // }
 
-  // if (screen.width >= 900) {
-  //   var largeur=160;
-  // }
-
-
-  new Chartist.Pie('.ct-chart', {
-
-     labels: labelsBrain,
-     series: seriesBrain
-  }, {
-    donut: true,
-    donutWidth: largeur,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
-
-  // produire une liste legendeUL
-
-
-  legendeAutomatique(dataBrain);
- 
-
+	var dataArray = [
+  [ 'Adobe XD',   13 ],
+  [ 'Axure',      1  ],
+  [ 'Balsamique',   2  ],
+  [ 'Figma',      2  ],
+  [ 'GoodNotes(iPad)',1  ],
+  [ 'HTML/CSS',   5  ],
+  [ 'Illustrator',  10 ],
+  [ 'Indesign',   1  ],
+  [ 'OmniGraffle',  1  ],
+  [ 'Papier',     16 ],
+  [ 'Zeplin',     1  ],
+  
+];
 
   </script>
+  <script src="../js/graph.js"></script>
 </body>
 </html>

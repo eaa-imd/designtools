@@ -2,15 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My first Chartist Tests</title>
-    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <script src="../libs/chartist/chartist.min.js"></script>
-    <script src="../js/fonctions.js"></script>
-    <script src="data-communication.js"></script>
+    <title>Design Tools Survey</title>
+  <!-- feuilles de style -->
+   <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+   <link rel="stylesheet" href="../css/base.css">
+    <!-- scripts -->
+   <script src="../libs/chartist/chartist.min.js"></script>
+   <script defer src="../js/jquery-3.2.1.min.js"></script>
+   <script defer src="../js/base.js"></script>
+   <script src="../js/fonctions.js"></script>
+   <script src="../js/menu.js"></script>
     
   </head>
   <body>
+
+    <header class=" site-header">
+  <h1>Design Tools Survey</h1>
+  <nav class="main-nav" id="main-nav"></nav>
+</header>
   
   <section class="section description">
 	<h2>Communication</h2>
@@ -18,22 +27,32 @@
 Comme le dit Matt Mullenweg, « la communication est l’oxygène d’une équipe. »</p>
 </section>
  
-  <div class="ct-chart ct-square"></div>
+  <section class="section graphe">
+  <div class="ct-chart ct-square visuel"></div>
+  <div class="legende" id="legende"></div>
+</section>
 
   <script>
 
-  new Chartist.Pie('.ct-chart', {
-
-     labels: labelsPays,
-     series: seriesPays
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
+    var dataArray = [
+  [ 'Asana', 1  ],
+  [ 'Aucun',   4  ],
+  [ 'Basecamp',   5 ],
+  [ 'Discord',   1 ],
+  [ 'Dropbox',   1 ],
+  [ 'Email',   2 ],
+  [ 'Github',   1 ],
+  [ 'HipChat',   1 ],
+  [ 'Papier',   1 ],
+  [ 'Skype',   4 ],
+  [ 'Slack',   12 ],
+  [ 'Stride',   1 ],
+  [ 'Teléphone',   1 ],
+  [ 'Telegram',   2 ],
+  
+];
 
   </script>
+  <script src="../js/graph.js"></script>
 </body>
 </html>

@@ -2,46 +2,54 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My first Chartist Tests</title>
+    <title>Design Tools Survey</title>
+    <!-- stylesheets -->
     <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
     <link rel="stylesheet" href="../css/base.css">
+    <!-- scripts -->
     <script src="../libs/chartist/chartist.min.js"></script>
+    <script defer src="../js/jquery-3.2.1.min.js"></script>
+    <script defer src="../js/base.js"></script>
     <script src="../js/fonctions.js"></script>
-    <script src="../js/wireframing.js"></script>
-    <style>
-
-      body {
-/*        font-family: Arial, sans-serif;
-*/      }
-
-      .ct-series-b .ct-slice-donut-solid {
-        fill: #0f0;
-      }
-
-    </style>
+    <script src="../js/menu.js"></script>
+    
   </head>
   <body>
-  <section class="section description">
-	<h2>Wireframe</h2>
-	<p class="texte-description">À la manière d’un plan d’architecte, le wireframe sert à mettre en place une hiérarchie cohérente pour un site. Ainsi il permet de planifier la hiérarchie, les interactions dans l’interface ainsi que la mise en page même si les couleurs, les images ou même la typographie n’a pas encore été choisie. </p>
-</section>
+
+    <header class=" site-header">
+      <h1>Design Tools Survey</h1>
+      <nav class="main-nav" id="main-nav"></nav>
+    </header>
+
+    <section class="section description">
+	    <h2>Wireframe</h2>
+	    <p class="texte-description">À la manière d’un plan d’architecte, le wireframe sert à mettre en place une hiérarchie cohérente pour un site. Ainsi il permet de planifier la hiérarchie, les interactions dans l’interface ainsi que la mise en page même si les couleurs, les images ou même la typographie n’a pas encore été choisie. </p>
+    </section>
   
-  <div class="ct-chart ct-square"></div>
+    <section class="section graphe">
+      <div class="ct-chart ct-square visuel"></div>
+      <div class="legende" id="legende"></div>
+    </section>
 
   <script>
 
-  new Chartist.Pie('.ct-chart', {
-
-     labels: labelsWireframing,
-     series: seriesWireframing
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
+var dataArray = [
+  [ 'Adobe XD', 6  ],
+  [ 'Axure',   2  ],
+  [ 'Balsamiq',   3 ],
+  [ 'Figma',   2 ],
+  [ 'GoodNotes sur iPad',   1 ],
+  [ 'HTML / CSS',   7 ],
+  [ 'Illustrator',   10 ],
+  [ 'InDesign',   1 ],
+  [ 'OmniGraffle',   1 ],
+  [ 'Papier',   16 ],
+  [ 'Sketch',   8 ],
+  [ 'Zeplin',   1 ],
+  [ 'Adobe XD',   7 ],
+];
 
   </script>
+  <script src="../js/graph.js"></script>
 </body>
 </html>
