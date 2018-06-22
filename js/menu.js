@@ -9,7 +9,7 @@ function ProduceMenu() {
 
     [ 'Brainstorming', 'brainstorming' ],
     [ 'Wireframing', 'wireframing' ],
-    [ 'Design d’interface', 'interface' ],
+    [ 'Design d’interface', 'design-interface' ],
 
     [ 'Prototypage', 'prototypage' ],
     [ 'Édition de code', 'edition-code' ],
@@ -27,7 +27,7 @@ function ProduceMenu() {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><a href="https://eaa-imd.github.io/designtools/' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
+    navProjMenu += '<li><img src="images/icones/' +Projet[1]+ '.svg"/><a href="' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
 
   }
 
@@ -37,21 +37,34 @@ function ProduceMenu() {
 
 function InsertMenu() {
 
-  var menuContainer = document.getElementsByClassName("auto-menu");
+  var menuContainer = document.getElementById("main-nav");
 
-  var menuContent = ProduceMenu();
+   var menuContent = `<label for="menu-toggle"><div class="wrap">
+<div class="icon-wrapper">
+  <div class="icon">
+    <div class="bar one"></div>
+    <div class="bar two"></div>
+    <div class="bar three"></div>
+  </div>
+</div>
+</div></label>
+<input type="checkbox" id="menu-toggle"/>
+<ul id="menu" class="menu">
+  <li class="auto-menu"><a href="#">tasks</a>
+  <ul class="menu-tasks">`;
 
-  for (var i = 0; i < menuContainer.length; i++) {
-      
-      var pageListUL = document.createElement("ul");
-      pageListUL.className = "menu-tasks";
-      pageListUL.innerHTML = menuContent;
-  
-      // on insère les contenus
+  menuContent += ProduceMenu();
 
-      menuContainer[i].appendChild(pageListUL);
+  menuContent += `</ul>
 
-  }
+  </li>
+    
+  <li><a href="#">toolbax</a></li>
+  <li><a href="#">participants</a></li>
+</ul>`;
+
+
+ menuContainer.innerHTML = menuContent;
 
 }
 
