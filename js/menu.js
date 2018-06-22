@@ -9,7 +9,7 @@ function ProduceMenu() {
 
     [ 'Brainstorming', 'brainstorming' ],
     [ 'Wireframing', 'wireframing' ],
-    [ 'Design d’interface', 'interface' ],
+    [ 'Design d’interface', 'design-interface' ],
 
     [ 'Prototypage', 'prototypage' ],
     [ 'Édition de code', 'edition-code' ],
@@ -27,7 +27,7 @@ function ProduceMenu() {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><a href="' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
+    navProjMenu += '<li><img src="images/icones/' +Projet[1]+ '.svg"/><a href="' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
 
   }
 
