@@ -1,7 +1,14 @@
 /*nav*/
 
-.main-nav {
+.main-nav
+{
 	width: 100%;
+	max-width: 80em;
+}
+
+.menu-nav a:link
+{
+	font-size: 3em;
 }
 
 .menu {
