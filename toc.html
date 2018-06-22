@@ -21,22 +21,8 @@
 <header class="section site-header">
 
 <h1>Design Tools Survey</h1>
-<nav class="main-nav">
+<nav class="main-nav" id="main-nav">
 
-<label for="menu-toggle">
-	<div class="icon">
-		<div class="bar one"></div>
-		<div class="bar two"></div>
-		<div class="bar three"></div>
-	</div>
-</label>
-<input type="checkbox" id="menu-toggle"/>
-<ul id="menu" class="menu">
-  <li class="auto-menu"><a href="#">tasks</a></li>
-
-  <li><a href="#">toolbax</a></li>
-  <li><a href="#">participants</a></li>
-</ul>
 
 </nav>
 </header>
@@ -44,17 +30,18 @@
 
 <section class="section intro">
 
-	<p>texte explicatif</p>
+	<p>Les outils de conception web sont en constante évolution. Régulièrement de nouveaux logiciels, updates et applications apparaissent et offre de nouveaux avantages en termes de technologie et design. S’en suit une course sans fin entre concurrents, qui cherche à nous offrir les meilleurs outils de conception.
+Nous avons donc réalisé une enquête sur les outils utilisés de nos jours dans le champ professionnel du web design et prototypage, afin d’obtenir des données actualisées pour 2018, et qui reflètent davantage les pratiques en Suisse romande, en France et en Belgique. Après avoir récolté un certain nombre d’informations auprès de designers et programmeurs web de ces trois pays, nous vous proposons aujourd’hui de découvrir le résultat de ce sondage.</p>
 </section>
 
 <section class="section tasks">
 	<h2>designer's tasks</h2>
-	<div class="auto-menu">
+	<div id="tasks">
   </div>
 </section>
 
 <section class="section toolbox">
-	<h2>Toolbox (best of)</h2>
+	<h2>toolbox (best of)</h2>
 </section>
 <section class="section participants">
 	<h2>participants</h2>
@@ -110,7 +97,24 @@
 	<p>un projet réalisé par les éléves de l'EAA de La Chaux-de-Fonds</p>
 </footer>
 
+<script>
 
+  // Insérer les Tasks
 
+  function TaskMenu() {
+
+    var menuContent = ProduceMenu();
+
+    var pageListUL = document.createElement("ul");
+    pageListUL.className = "menu-tasks";
+    pageListUL.innerHTML = menuContent;
+
+    document.getElementById("tasks").appendChild(pageListUL);
+
+  }
+
+  window.addEventListener("load", TaskMenu, false);
+
+</script>
 </body>
 </html>
