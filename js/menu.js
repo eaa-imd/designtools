@@ -27,7 +27,7 @@ function ProduceMenu() {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><a href="' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
+    navProjMenu += '<li><a href="https://eaa-imd.github.io/designtools/' +Projet[1]+ '">' +Projet[0]+ '</a></li>';
 
   }
 
