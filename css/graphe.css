@@ -39,9 +39,15 @@
   
 }
 
+.ct-series
+{
+	stroke: white;
+	stroke-width: 4px;
+}
+
 /*couleur graphe*/
 
-.ct-series-a .ct-slice-donut-solid { fill: #FF862F; }
+.ct-series-a .ct-slice-donut-solid { fill: #FF862F;  }
 
 .ct-series-b .ct-slice-donut-solid { fill: #BF6423; }
 
