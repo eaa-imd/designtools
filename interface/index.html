@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My first Chartist Tests</title>
+    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <script src="../libs/chartist/chartist.min.js"></script>
+    <script src="../js/fonctions.js"></script>
+    <script src="interface.js"></script>
+    <style>
+      
+      body {
+/*        font-family: Arial, sans-serif;
+*/      }
+      .ct-series-b .ct-slice-donut-solid {
+        fill: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="ct-chart ct-square"></div>
+
+  <script>
+  new Chartist.Pie('.ct-chart', {
+     labels: labelsPays,
+     series: seriesPays
+  }, {
+    donut: true,
+    donutWidth: 80,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+  </script>
+</body>
+</html>
