@@ -52,7 +52,9 @@ function legendeAutomatique(data) {
 
     var legendePourcent = Math.round(( legendeData[1] / dataTotal ) * 100);
 
-    legendeContenu += '<li>' +legendeData[0]+ ' : '+ legendePourcent +'%</li>';
+    legendeCouleur = '<div class="couleur"></div>';
+
+    legendeContenu += '<li>' + legendeCouleur + '<span>'+legendeData[0]+ ' : '+ legendePourcent +'%</span></li>';
 
   }
 

@@ -7,18 +7,35 @@
 
 .legende {
   margin: auto;
+
 }
 
 .legende ul
 {
   list-style-type: none;
   padding: 0;
+  margin-left: 2em;
 }
 
 .legende li
 {
-  padding-left: 60px;
-  padding-top: 8px ;
+  padding-left: 0px;
+  padding-top: 0px ;
+  display: flex;
+  line-height: 2em;
+}
+
+.legende .couleur {
+  width: 1em;
+  height: 1em;
+  background-color: gray;
+  border-radius: 100%;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+.legende li:first-of-type {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 600px) {
@@ -39,43 +56,96 @@
   
 }
 
+/*
+
+Style du graphe
+
+*/
+
 .ct-series
 {
 	stroke: white;
 	stroke-width: 4px;
 }
 
-/*couleur graphe*/
+/*
 
-.ct-series-a .ct-slice-donut-solid { fill: #FF862F;  }
+Couleur du graphe
 
+*/
+
+.ct-series-a .ct-slice-donut-solid { fill: #FF862F; }
 .ct-series-b .ct-slice-donut-solid { fill: #BF6423; }
-
 .ct-series-c .ct-slice-donut-solid { fill: #7F4317; }
-
 .ct-series-d .ct-slice-donut-solid { fill: #40210C; }
-
 .ct-series-e .ct-slice-donut-solid { fill: #FAF22F; }
-
 .ct-series-f .ct-slice-donut-solid { fill: #BAB423; }
-
 .ct-series-g .ct-slice-donut-solid { fill: #7A7717; }
-
 .ct-series-h .ct-slice-donut-solid { fill: #635D15; }
-
 .ct-series-i .ct-slice-donut-solid { fill: #2DF281; }
-
 .ct-series-j .ct-slice-donut-solid { fill: #28D873; }
-
 .ct-series-k .ct-slice-donut-solid { fill: #21B25F; }
-
 .ct-series-l .ct-slice-donut-solid { fill: #15723D; }
-
 .ct-series-m .ct-slice-donut-solid { fill: #19AAFB; }
-
 .ct-series-n .ct-slice-donut-solid { fill: #137FBB; }
-
 .ct-series-o .ct-slice-donut-solid { fill: #0C547B; }
-
 .ct-series-p .ct-slice-donut-solid { fill: #06283C; }
 
+/*
+
+Opacité du graphe
+
+*/
+
+.ct-series-a .ct-slice-donut-solid, li:nth-of-type(1) .couleur { opacity: 1;      }
+.ct-series-b .ct-slice-donut-solid, li:nth-of-type(2) .couleur { opacity: 0.94;   }
+.ct-series-c .ct-slice-donut-solid, li:nth-of-type(3) .couleur { opacity: 0.8750; }
+.ct-series-d .ct-slice-donut-solid, li:nth-of-type(4) .couleur { opacity: 0.8125; }
+.ct-series-e .ct-slice-donut-solid, li:nth-of-type(5) .couleur { opacity: 0.75;   }
+.ct-series-f .ct-slice-donut-solid, li:nth-of-type(6) .couleur { opacity: 0.6875; }
+.ct-series-g .ct-slice-donut-solid, li:nth-of-type(7) .couleur { opacity: 0.625;  }
+.ct-series-h .ct-slice-donut-solid, li:nth-of-type(8) .couleur { opacity: 0.5625; }
+.ct-series-i .ct-slice-donut-solid, li:nth-of-type(9) .couleur { opacity: 0.50;   }
+.ct-series-j .ct-slice-donut-solid, li:nth-of-type(10) .couleur { opacity: 0.4375; }
+.ct-series-k .ct-slice-donut-solid, li:nth-of-type(11) .couleur { opacity: 0.375;  }
+.ct-series-l .ct-slice-donut-solid, li:nth-of-type(12) .couleur { opacity: 0.3125; }
+.ct-series-m .ct-slice-donut-solid, li:nth-of-type(13) .couleur { opacity: 0.25;   }
+.ct-series-n .ct-slice-donut-solid, li:nth-of-type(14) .couleur { opacity: 0.1875; }
+.ct-series-o .ct-slice-donut-solid, li:nth-of-type(15) .couleur { opacity: 0.125;  }
+.ct-series-p .ct-slice-donut-solid, li:nth-of-type(16) .couleur { opacity: 0.625;  }
+
+/*
+ * Couleurs selon thématique
+*/
+
+/* Code couleur de base 
+
+#13C6FF - brainstorming
+#2DF281 - wireframing
+#FAF22F
+#FB30FF - prototypage
+#FE3950
+#FE8E27
+#8235FF
+#2932FF
+#058D3F
+
+*/
+
+.brainstorming .ct-slice-donut-solid  { fill: #13C6FF; }
+.brainstorming .couleur { background-color : #13C6FF; }
+
+.wireframing .ct-slice-donut-solid  { fill: #2DF281; }
+.wireframing .couleur { background-color : #2DF281; }
+
+.prototypage .ct-slice-donut-solid  { fill: #FB30FF; }
+.prototypage .couleur { background-color : #FB30FF; }
+
+/*
+ * Survol
+*/
+
+.ct-slice-donut-solid:hover {
+/*  fill: #000;
+*/  opacity: 1;
+}
