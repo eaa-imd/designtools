@@ -13,6 +13,8 @@ if (dataArray) {
     var largeur=160;
   }
 
+  dataArray.sort(compareSecondColumn);
+
   var dataLabels = arrayKeys(dataArray);
   var dataChiffres = arrayValues(dataArray);
 
@@ -39,12 +41,9 @@ function legendeAutomatique(data) {
 
   var legendeContenu = '';
 
-  // Ordonner dataBrain par numéro
-    data.sort(compareSecondColumn);
-
-    // additionner tous les chiffres
-    var dataChiffres = arrayValues(data);
-    var dataTotal = dataChiffres.reduce((a, b) => a + b, 0);
+  // additionner tous les chiffres
+  var dataChiffres = arrayValues(data);
+  var dataTotal = dataChiffres.reduce((a, b) => a + b, 0);
 
   for (var i = 0; i < data.length; i++) {
   
