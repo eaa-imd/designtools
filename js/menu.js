@@ -39,15 +39,13 @@ function InsertMenu() {
 
   var menuContainer = document.getElementById("main-nav");
 
-   var menuContent = `<label for="menu-toggle"><div class="wrap">
-<div class="icon-wrapper">
-  <div class="icon">
+   var menuContent = `<label for="menu-toggle">
+  <div class="icon" id="menu-icon">
     <div class="bar one"></div>
     <div class="bar two"></div>
     <div class="bar three"></div>
   </div>
-</div>
-</div></label>
+</label>
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
   <li class="auto-menu"><a href="#">tasks</a>
@@ -66,7 +64,43 @@ function InsertMenu() {
 
  menuContainer.innerHTML = menuContent;
 
+ document.getElementById("menu-icon").addEventListener("click", showHideMenu, false);
+
 }
 
 window.addEventListener("load", InsertMenu, false);
+
+/* Animation de l'icone 
+
+Code jQuery original:
+
+$(".icon").click(ain);
+
+function ain() {
+  if ($(".icon .bar").hasClass("active")) {
+    $(".icon .bar").removeClass("active");
+    $(".icon .bar").addClass("notActive");
+  } else {
+    $(".icon .bar").removeClass("notActive");
+    $(".icon .bar").addClass("active");
+  }
+}
+
+*/
+
+function showHideMenu() {
+
+  // ajouter / enlever les classes .active et .notactive
+
+  if ($(".icon .bar").hasClass("active")) {
+    $(".icon .bar").removeClass("active");
+    $(".icon .bar").addClass("notActive");
+  } else {
+    $(".icon .bar").removeClass("notActive");
+    $(".icon .bar").addClass("active");
+  }
+
+}
+
+
 
