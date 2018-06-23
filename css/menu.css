@@ -4,7 +4,9 @@
 {
 	width: 100%;
 	max-width: 80em;
-}
+	z-index: 1;
+/*	left: -16px;
+*/}
 
 .menu-nav a:link
 {
@@ -16,6 +18,10 @@
 	width: 100%;
 	border: 1px solid blue;
 	margin-left: -1em;
+	z-index: 1;
+	padding: 0;
+	overflow-y: auto;
+	max-height: 80vh;
 }
 
 .menu-tasks {
@@ -24,7 +30,15 @@
 	grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 600px)
+{
+	.menu-tasks
+	{
+		grid-template-columns: 1fr 1fr;
+	}	
+}
+
+@media screen and (min-width: 900px)
 {
 	.menu-tasks
 	{
@@ -66,6 +80,7 @@
 	min-height: 1.5em;
 	margin-top: 0.1em;
 	padding: 0.5em;
+
 /*	width: 10px;
 	height: 10px;*/
 /*	border: 1px solid red;*/
@@ -85,7 +100,8 @@
 
 .menu-tasks a:hover
 {
-	color: yellow;
+/*	color: yellow;
+*/	text-shadow: 0px 0px 15px yellow;
 	text-decoration: none;
 }
 
