@@ -23,11 +23,20 @@ function ProduceMenu() {
 
   var navProjMenu = '';
 
+  var navPath = '../';
+
+  // Corriger le chemin si on est sur la page d'accueil:
+  var navTest = document.querySelectorAll("body.home");
+  if (navTest.length == 1) {
+    navPath = '';
+  }
+
+
   for (var i = 0; i < MenuList.length; i++) {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><a href="' +Projet[1]+ '"><img src="images/icones/' +Projet[1]+ '.svg"/><div>' +Projet[0]+ '</div></a></li>';
+    navProjMenu +=  '<li><a href="' + navPath +Projet[1]+ '"><img src="'+navPath+'images/icones/' +Projet[1]+ '.svg"/><div>' +Projet[0]+ '</div></a></li>';
 
   }
 
