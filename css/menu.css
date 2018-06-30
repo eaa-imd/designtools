@@ -156,22 +156,22 @@
  Etat Actif
 */
 
-.icon .bar.one.active
+.active .icon .bar.one
 {
 	animation: one 1s forwards
 }
-.icon .bar.two.active
+.active .icon .bar.two
 {
 	animation: two 1s forwards
 }
-.icon .bar.three.active
+.active .icon .bar.three
 {
 	animation: three 1s forwards
 }
 
-.icon .bar.one.notActive {animation: one-reverse 1s forwards;}
-.icon .bar.two.notActive {animation: two-reverse 1s forwards;}
-.icon .bar.three.notActive {animation: three-reverse 1s forwards;}
+.not-active .icon .bar.one{animation: one-reverse 1s forwards;}
+.not-active .icon .bar.two {animation: two-reverse 1s forwards;}
+.not-active .icon .bar.three {animation: three-reverse 1s forwards;}
 
 @keyframes one
 {

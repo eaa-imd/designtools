@@ -79,34 +79,17 @@ function InsertMenu() {
 
 window.addEventListener("load", InsertMenu, false);
 
-/* Animation de l'icone 
-
-Code jQuery original:
-
-$(".icon").click(ain);
-
-function ain() {
-  if ($(".icon .bar").hasClass("active")) {
-    $(".icon .bar").removeClass("active");
-    $(".icon .bar").addClass("notActive");
-  } else {
-    $(".icon .bar").removeClass("notActive");
-    $(".icon .bar").addClass("active");
-  }
-}
-
-*/
 
 function showHideMenu() {
 
-  // ajouter / enlever les classes .active et .notactive
+  var menuContainer = document.getElementById("main-nav");
 
-  if ($(".icon .bar").hasClass("active")) {
-    $(".icon .bar").removeClass("active");
-    $(".icon .bar").addClass("notActive");
+  if ( menuContainer.classList.contains("active") ) {
+      menuContainer.classList.remove("active");
+      menuContainer.classList.add("not-active");
   } else {
-    $(".icon .bar").removeClass("notActive");
-    $(".icon .bar").addClass("active");
+    menuContainer.classList.remove("not-active");
+    menuContainer.classList.add("active");
   }
 
 }
