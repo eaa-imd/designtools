@@ -70,7 +70,7 @@ Style du graphe
 
 /*
 
-Couleur du graphe
+Couleurs par défaut du graphe
 
 */
 
@@ -93,7 +93,34 @@ Couleur du graphe
 
 /*
 
+Couleurs par défaut du cercle
+
+*/
+
+li:nth-of-type(1) .couleur { background-color: #FF862F; }
+li:nth-of-type(2) .couleur { background-color: #BF6423; }
+li:nth-of-type(3) .couleur { background-color: #7F4317; }
+li:nth-of-type(4) .couleur { background-color: #40210C; }
+li:nth-of-type(5) .couleur { background-color: #FAF22F; }
+li:nth-of-type(6) .couleur { background-color: #BAB423; }
+li:nth-of-type(7) .couleur { background-color: #7A7717; }
+li:nth-of-type(8) .couleur { background-color: #635D15; }
+li:nth-of-type(9) .couleur { background-color: #2DF281; }
+li:nth-of-type(10) .couleur { background-color: #28D873; }
+li:nth-of-type(11) .couleur { background-color: #21B25F; }
+li:nth-of-type(12) .couleur { background-color: #15723D; }
+li:nth-of-type(13) .couleur { background-color: #19AAFB; }
+li:nth-of-type(14) .couleur { background-color: #137FBB; }
+li:nth-of-type(15) .couleur { background-color: #0C547B; }
+li:nth-of-type(16) .couleur { background-color: #06283C; }
+
+/*
+
 Opacité du graphe
+
+NB: ce serait encore mieux si elle était 
+calculée pour chaque graphe, 
+en fonction du nombre d'éléments.
 
 */
 
@@ -102,17 +129,22 @@ Opacité du graphe
 .ct-series-c .ct-slice-donut-solid, li:nth-of-type(3) .couleur { opacity: 0.8750; }
 .ct-series-d .ct-slice-donut-solid, li:nth-of-type(4) .couleur { opacity: 0.8125; }
 .ct-series-e .ct-slice-donut-solid, li:nth-of-type(5) .couleur { opacity: 0.75;   }
+
 .ct-series-f .ct-slice-donut-solid, li:nth-of-type(6) .couleur { opacity: 0.6875; }
 .ct-series-g .ct-slice-donut-solid, li:nth-of-type(7) .couleur { opacity: 0.625;  }
 .ct-series-h .ct-slice-donut-solid, li:nth-of-type(8) .couleur { opacity: 0.5625; }
 .ct-series-i .ct-slice-donut-solid, li:nth-of-type(9) .couleur { opacity: 0.50;   }
 .ct-series-j .ct-slice-donut-solid, li:nth-of-type(10) .couleur { opacity: 0.4375; }
+
 .ct-series-k .ct-slice-donut-solid, li:nth-of-type(11) .couleur { opacity: 0.375;  }
 .ct-series-l .ct-slice-donut-solid, li:nth-of-type(12) .couleur { opacity: 0.3125; }
 .ct-series-m .ct-slice-donut-solid, li:nth-of-type(13) .couleur { opacity: 0.25;   }
 .ct-series-n .ct-slice-donut-solid, li:nth-of-type(14) .couleur { opacity: 0.1875; }
 .ct-series-o .ct-slice-donut-solid, li:nth-of-type(15) .couleur { opacity: 0.125;  }
-.ct-series-p .ct-slice-donut-solid, li:nth-of-type(16) .couleur { opacity: 0.625;  }
+
+.ct-series-p .ct-slice-donut-solid, li:nth-of-type(16) .couleur { opacity: 0.1;  }
+.ct-series-q .ct-slice-donut-solid, li:nth-of-type(17) .couleur { opacity: 0.08;  }
+.ct-series-r .ct-slice-donut-solid, li:nth-of-type(18) .couleur { opacity: 0.06;  }
 
 /*
  * Couleurs selon thématique
@@ -122,24 +154,46 @@ Opacité du graphe
 
 #13C6FF - brainstorming
 #2DF281 - wireframing
-#FAF22F
+#FAF22F - design-interface
+
 #FB30FF - prototypage
-#FE3950
-#FE8E27
-#8235FF
-#2932FF
-#058D3F
+#FE3950 - edition-code
+#FE8E27 - cms-frameworks
+
+#8235FF - gestion-de-version
+#2932FF - systemes-de-design
+#058D3F - communication
 
 */
 
 .brainstorming .ct-slice-donut-solid  { fill: #13C6FF; }
-.brainstorming .couleur { background-color : #13C6FF; }
+.brainstorming li .couleur { background-color : #13C6FF; }
 
 .wireframing .ct-slice-donut-solid  { fill: #2DF281; }
-.wireframing .couleur { background-color : #2DF281; }
+.wireframing li .couleur { background-color : #2DF281; }
+
+.design-interface .ct-slice-donut-solid  { fill: #FAF22F; }
+.design-interface li .couleur { background-color : #FAF22F; }
+
 
 .prototypage .ct-slice-donut-solid  { fill: #FB30FF; }
-.prototypage .couleur { background-color : #FB30FF; }
+.prototypage li .couleur { background-color : #FB30FF; }
+
+.edition-code .ct-slice-donut-solid  { fill: #FE3950; }
+.edition-code li .couleur { background-color : #FE3950; }
+
+.cms-frameworks .ct-slice-donut-solid  { fill: #FE8E27; }
+.cms-frameworks li .couleur { background-color : #FE8E27; }
+
+
+.gestion-de-version .ct-slice-donut-solid  { fill: #8235FF; }
+.gestion-de-version li .couleur { background-color : #8235FF; }
+
+.systemes-de-design .ct-slice-donut-solid  { fill: #2932FF; }
+.systemes-de-design li .couleur { background-color : #2932FF; }
+
+.communication .ct-slice-donut-solid  { fill: #058D3F; }
+.communication li .couleur { background-color : #058D3F; }
 
 /*
  * Survol
