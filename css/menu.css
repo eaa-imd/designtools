@@ -122,10 +122,12 @@
 
 .bar
 {
-  width: 30px; height: 3px;
+  width: 30px; 
+  height: 3px;
   background-color: black;
   margin: 0px 0;
-  position:absolute;
+  position: absolute;
+  transition: all 0.2s linear;
 }
 
 .icon .bar.one {top: 0; left: 0; }
@@ -136,8 +138,9 @@
 @media screen and (min-width: 600px) {
 	.bar
 	{
-		width: 50px; height: 5px;
-  		margin: 14px 0; 
+		width: 50px; 
+		height: 5px;
+  	margin: 14px 0; 
 	}
 	
 	.icon .bar.two 
@@ -158,70 +161,15 @@
 
 .active .icon .bar.one
 {
-	animation: one 1s forwards
+	top: 10px; transform: rotate(45deg);
 }
 .active .icon .bar.two
 {
-	animation: two 1s forwards
+	opacity: 0;
 }
 .active .icon .bar.three
 {
-	animation: three 1s forwards
-}
-
-.not-active .icon .bar.one{animation: one-reverse 1s forwards;}
-.not-active .icon .bar.two {animation: two-reverse 1s forwards;}
-.not-active .icon .bar.three {animation: three-reverse 1s forwards;}
-
-@keyframes one
-{
-	0% {top:0;}
-	30% {top:-5px}
-	60% {top:10px}
-	80% {transform: rotate(0)}
-	100% {top:10px; transform: rotate(45deg);}
-}
-
-@keyframes one-reverse
-{
-	0% {top:10px; transform: rotate(45deg);}
-	30% {transform: rotate(0)}
-	60% {top:10px}
-	80% {top:-5px}
-	100% {top:0;}
-}
-
-@keyframes two
-{
-	0% {opacity:1;}
-	80% {opacity:1;}
-	100% {opacity:0;}
-}
-
-
-@keyframes two-reverse
-{
-	0% {opacity:0;}
-	80% {opacity:1;}
-	100% {opacity:1;}
-}
-
-@keyframes three
-{
-	0% {top: 20px; }
-	30% {top: 25px; }
-  60% {top: 10px; }
-	80% {transform: rotate(0)}
-	100% {top: 10px; transform: rotate(-45deg);}
-}
-
-@keyframes three-reverse
-{
-	0% {top: 10px; transform: rotate(-45deg);}
-	30% {transform: rotate(0); }
-  60% {top: 10px; }
-	80% {top: 25px;}
-	100% {top: 20px; }
+	top: 10px; transform: rotate(-45deg);
 }
 
 label
