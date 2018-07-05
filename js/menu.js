@@ -48,7 +48,7 @@ function InsertMenu() {
 
   var menuContainer = document.getElementById("main-nav");
 
-   var menuContent = `<label for="menu-toggle">
+  var menuContent = `<label for="menu-toggle">
   <div class="icon" id="menu-icon">
     <div class="bar one"></div>
     <div class="bar two"></div>
