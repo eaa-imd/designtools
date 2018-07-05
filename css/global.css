@@ -77,6 +77,10 @@ h2
 {
   font-size: 1em;
   text-align: center;
+
+.site-header a {
+  text-decoration: none;
+  color: #000;
 }
 
 @media screen and (min-width: 600px) {
