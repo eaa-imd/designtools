@@ -66,8 +66,8 @@ function InsertMenu() {
 
   </li>
     
-  <li><a href="#">toolbax</a></li>
-  <li><a href="#">participants</a></li>
+  <li><a href="#">Toolbox</a></li>
+  <li><a href="#">Participants</a></li>
 </ul>`;
 
 

@@ -54,7 +54,7 @@ function legendeAutomatique(data) {
 
     legendeCouleur = '<div class="couleur"></div>';
 
-    legendeContenu += '<li>' + legendeCouleur + '<span>'+legendeData[0]+ ' : '+ legendePourcent +'%</span></li>';
+    legendeContenu += '<li>' + legendeCouleur + '<span>' + legendePourcent + '% : ' + legendeData[0] + '</span></li>';
 
   }
 
