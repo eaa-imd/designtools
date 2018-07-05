@@ -18,6 +18,30 @@ function arrayValues(input) {
     return output; 
 }
 
+/*
+ * Fonction pour mettre dans l'ordre la 2e colonne.
+*/
+
+function compareSecondColumn(a, b) {
+    if (a[1] === b[1]) {
+        return 0;
+    }
+    else {
+        return (a[1] > b[1]) ? -1 : 1;
+    }
+}
+
+
+
+/*
+ * Fonction pour arrondir les chiffres.
+*/
+
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
+
+
 // Exemple de boucle "for" sur un array à deux dimensions.
 // for (var k in dataAge){
 //     if (dataAge.hasOwnProperty(k)) {

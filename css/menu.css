@@ -1,7 +1,16 @@
 /*nav*/
 
-.main-nav {
+.main-nav
+{
 	width: 100%;
+	max-width: 80em;
+	z-index: 1;
+/*	left: -16px;
+*/}
+
+.menu-nav a:link
+{
+	font-size: 3em;
 }
 
 .menu {
@@ -9,15 +18,27 @@
 	width: 100%;
 	border: 1px solid blue;
 	margin-left: -1em;
+	z-index: 1;
+	padding: 0;
+	overflow-y: auto;
+	max-height: 80vh;
 }
 
 .menu-tasks {
 	display: grid;
 	padding: 0;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 600px)
+{
+	.menu-tasks
+	{
+		grid-template-columns: 1fr 1fr;
+	}	
+}
+
+@media screen and (min-width: 900px)
 {
 	.menu-tasks
 	{
@@ -38,8 +59,17 @@
 
 .menu-tasks ul, img
 {
-	width: 10em;
-	height: 10em;
+	width: 5em;
+	height: 5em;
+}
+
+@media screen and (min-width: 768px)
+{
+	.menu-tasks ul, img
+	{
+		width: 10em;
+		height: 10em;
+	}
 }
 
 .menu-tasks a
@@ -50,6 +80,7 @@
 	min-height: 1.5em;
 	margin-top: 0.1em;
 	padding: 0.5em;
+
 /*	width: 10px;
 	height: 10px;*/
 /*	border: 1px solid red;*/
@@ -69,7 +100,8 @@
 
 .menu-tasks a:hover
 {
-	color: yellow;
+/*	color: yellow;
+*/	text-shadow: 0px 0px 15px yellow;
 	text-decoration: none;
 }
 
@@ -90,10 +122,12 @@
 
 .bar
 {
-  width: 30px; height: 3px;
+  width: 30px; 
+  height: 3px;
   background-color: black;
   margin: 0px 0;
-  position:absolute;
+  position: absolute;
+  transition: all 0.2s linear;
 }
 
 .icon .bar.one {top: 0; left: 0; }
@@ -104,8 +138,9 @@
 @media screen and (min-width: 600px) {
 	.bar
 	{
-		width: 50px; height: 5px;
-  		margin: 14px 0; 
+		width: 50px; 
+		height: 5px;
+  	margin: 14px 0; 
 	}
 	
 	.icon .bar.two 
@@ -124,72 +159,17 @@
  Etat Actif
 */
 
-.icon .bar.one.active
+.active .icon .bar.one
 {
-	animation: one 1s forwards
+	top: 10px; transform: rotate(45deg);
 }
-.icon .bar.two.active
+.active .icon .bar.two
 {
-	animation: two 1s forwards
+	opacity: 0;
 }
-.icon .bar.three.active
+.active .icon .bar.three
 {
-	animation: three 1s forwards
-}
-
-.icon .bar.one.notActive {animation: one-reverse 1s forwards;}
-.icon .bar.two.notActive {animation: two-reverse 1s forwards;}
-.icon .bar.three.notActive {animation: three-reverse 1s forwards;}
-
-@keyframes one
-{
-	0% {top:0;}
-	30% {top:-5px}
-	60% {top:10px}
-	80% {transform: rotate(0)}
-	100% {top:10px; transform: rotate(45deg);}
-}
-
-@keyframes one-reverse
-{
-	0% {top:10px; transform: rotate(45deg);}
-	30% {transform: rotate(0)}
-	60% {top:10px}
-	80% {top:-5px}
-	100% {top:0;}
-}
-
-@keyframes two
-{
-	0% {opacity:1;}
-	80% {opacity:1;}
-	100% {opacity:0;}
-}
-
-
-@keyframes two-reverse
-{
-	0% {opacity:0;}
-	80% {opacity:1;}
-	100% {opacity:1;}
-}
-
-@keyframes three
-{
-	0% {top: 20px; }
-	30% {top: 25px; }
-  60% {top: 10px; }
-	80% {transform: rotate(0)}
-	100% {top: 10px; transform: rotate(-45deg);}
-}
-
-@keyframes three-reverse
-{
-	0% {top: 10px; transform: rotate(-45deg);}
-	30% {transform: rotate(0); }
-  60% {top: 10px; }
-	80% {top: 25px;}
-	100% {top: 20px; }
+	top: 10px; transform: rotate(-45deg);
 }
 
 label

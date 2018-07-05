@@ -23,11 +23,20 @@ function ProduceMenu() {
 
   var navProjMenu = '';
 
+  var navPath = '../';
+
+  // Corriger le chemin si on est sur la page d'accueil:
+  var navTest = document.querySelectorAll("body.home");
+  if (navTest.length == 1) {
+    navPath = '';
+  }
+
+
   for (var i = 0; i < MenuList.length; i++) {
 
     var Projet = MenuList[i];
 
-    navProjMenu += '<li><a href="' +Projet[1]+ '"><img src="images/icones/' +Projet[1]+ '.svg"/><div>' +Projet[0]+ '</div></a></li>';
+    navProjMenu +=  '<li><a href="' + navPath +Projet[1]+ '"><img src="'+navPath+'images/icones/' +Projet[1]+ '.svg"/><div>' +Projet[0]+ '</div></a></li>';
 
   }
 
@@ -39,15 +48,13 @@ function InsertMenu() {
 
   var menuContainer = document.getElementById("main-nav");
 
-   var menuContent = `<label for="menu-toggle"><div class="wrap">
-<div class="icon-wrapper">
-  <div class="icon">
+   var menuContent = `<label for="menu-toggle">
+  <div class="icon" id="menu-icon">
     <div class="bar one"></div>
     <div class="bar two"></div>
     <div class="bar three"></div>
   </div>
-</div>
-</div></label>
+</label>
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
   <li class="auto-menu"><a href="#">tasks</a>
@@ -66,7 +73,26 @@ function InsertMenu() {
 
  menuContainer.innerHTML = menuContent;
 
+ document.getElementById("menu-icon").addEventListener("click", showHideMenu, false);
+
 }
 
 window.addEventListener("load", InsertMenu, false);
+
+
+function showHideMenu() {
+
+  var menuContainer = document.getElementById("main-nav");
+
+  if ( menuContainer.classList.contains("active") ) {
+      menuContainer.classList.remove("active");
+      menuContainer.classList.add("not-active");
+  } else {
+    menuContainer.classList.remove("not-active");
+    menuContainer.classList.add("active");
+  }
+
+}
+
+
 

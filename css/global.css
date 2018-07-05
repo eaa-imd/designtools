@@ -3,6 +3,7 @@ body
   padding: 1em;
   margin: 0px;
   background: linear-gradient(to bottom,  #FAF22F, #FAF22F 4em, #fff 4em, #fff 75%);
+  background-attachment: fixed;
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, "sans-serif";    
 }
 
@@ -10,7 +11,8 @@ body
   
   body
   {
-    background: linear-gradient(to bottom,  #FAF22F, #FAF22F 7em, #fff 7em, #fff 75%);    
+    background: linear-gradient(to bottom,  #FAF22F, #FAF22F 7em, #fff 7em, #fff 75%);
+
   }
 
 }
@@ -96,4 +98,9 @@ h2
 {
 	display:flex;
 }
+	
+	.ct-chart-2,.ct-chart-3
+	{
+		margin-left:10%;
+	}
 }

@@ -3,66 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Design Tools Survey</title>
-<link rel="stylesheet" href="../libs/chartist/chartist.min.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <script src="../libs/chartist/chartist.min.js"></script>
-    <script src="../js/fonctions.js"></script>
-    <script src="data-version.js"></script>
-    
-    
+  <!-- feuilles de style -->
+   <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+   <link rel="stylesheet" href="../css/base.css">
+    <!-- scripts -->
+   <script src="../libs/chartist/chartist.min.js"></script>
+   <script src="../js/fonctions.js"></script>
+   <script src="../js/menu.js"></script>
 </head>
 
-<body>
+<body class="gestion-de-version">
 
-<header class=" site-header">
-
-<h1>Logiciel de gestion de version</h1>
-<nav class="main-nav">
-
-<label for="menu-toggle"><div class="wrap">
-<div class="icon-wrapper">
-	<div class="icon">
-		<div class="bar one"></div>
-		<div class="bar two"></div>
-		<div class="bar three"></div>
-	</div>
-</div>
-</div></label>
-<input type="checkbox" id="menu-toggle"/>
-<ul id="menu" class="menu">
-  <li><a href="#">tasks</a></li>
-  	<ul class="sous-menu">
-  		<li><a href="brainstorming/index.html">brainstorming</a></li>
-  		<li><a href="#">wireframing</a></li>
-  		<li><a href="#">design d'interface</a></li>
-  		<li><a href="#">prototypage</a></li>
-  		<li><a href="#">édition de code</a></li>
-  		<li><a href="#">CMS/frameworks</a></li>
-  		<li><a href="#">gestion de versions et de fichiers</a></li>
-  		<li><a href="#">systèmes de design</a></li>
- 		 <li><a href="#">communication</a></li>
- 	 </ul>
-  <li><a href="#">toolbax</a></li>
-  <li><a href="#">participants</a></li>
-</ul>
-	
-</nav>
-</header>
+<header class="site-header">
+    <h1>Design Tools Survey</h1>
+    <nav class="main-nav" id="main-nav"></nav>
+  </header>
 
 
 <section class="section description">
-	<h1>Les logiciels de gestion de version</h1>
-	<p>La gestion de version va donner la possibilité de stocker un ensemble de fichier tout en conservant la chronologie de toutes les modifications qui ont été effectué dessus. Un groupe de développeurs va donc pouvoir travailler en collaboration sur un même développement et gardera toujours une trace de tout ce qui a été modifié.</p>
+	<h2>Les logiciels de gestion de version</h2>
+	<p class="texte-description">La gestion de version va donner la possibilité de stocker un ensemble de fichier tout en conservant la chronologie de toutes les modifications qui ont été effectué dessus. Un groupe de développeurs va donc pouvoir travailler en collaboration sur un même développement et gardera toujours une trace de tout ce qui a été modifié.</p>
 </section>
 
 <section class="section graphe">
-	<div class="ct-chart ct-square visuel"></div>
-	<ul class="legende">
-	<li>élément 1</li>
-	<li>élément 2</li>
-	<li>élément 3</li>
-	</ul>
-</section>
+    <div class="ct-chart ct-square visuel"></div>
+    <div class="legende" id="legende"></div>
+  </section>
 
 <section class=" nav-tasks">
 	<p>navigation entre tâches</p>
@@ -73,32 +39,15 @@
 
   <script>
 
-  new Chartist.Pie('.ct-chart', {
-
-     labels: labelsVersion,
-     series: seriesVersion
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
-	  
-	  
-	  
-  new Chartist.Pie('.ct-chart-2', {
-
-     labels: labelsVersion,
-     series: seriesVersion
-  }, {
-    donut: true,
-    donutWidth: 80,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
-  });
+  var dataArray = [
+ [ 'Github', 10  ],
+  [ 'Google drive',   7  ],
+  [ 'Bitbucket',  2 ],
+  [ 'Dropbox',  2 ],
+  [ 'Abstract',  1 ],
+];
 
   </script>
+  <script src="../js/graph.js"></script>
 </body>
 </html>
