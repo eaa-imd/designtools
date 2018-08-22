@@ -1,0 +1,18 @@
+Relevé des réponses vides:
+
+'Quel métier pratiquez-vous dans le domaine du web ?' = 0
+'Dans quel genre d'organisation travaillez-vous?' = 4
+
+'Quels outils utilisez-vous pour le wireframing?' = 3
+'Quels outils utilisez-vous pour le design d'interface?' = 0
+'Quels outils utilisez-vous pour le prototypage?' = 6
+'Quels outils utilisez-vous pour le brainstorming?' = 1
+'Quels outils utilisez-vous pour communiquer dans votre équipe?' = 11
+'Quels CMS ou Frameworks de code utilisez-vous?' = 11
+'Quels outils utilisez-vous pour l'édition du code?' = 9
+'Quels outils utilisez-vous pour gérer des systèmes de design?' = 41
+'Quels outils utilisez-vous pour la gestion de versions et de fichiers?' = 8
+
+Total retours: 78
+
+***
