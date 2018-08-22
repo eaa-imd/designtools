@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crédits – Design Tools Survey</title>
+    <link rel="stylesheet" href="../libs/chartist/chartist.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- scripts -->
+    <script src="../libs/chartist/chartist.min.js"></script>
+    <script src="../js/fonctions.js"></script>
+    <script src="../js/menu.js"></script>
+  </head>
+  <body class="design-interface">
+    <header class="site-header">
+      <h1><a href="../">Design Tools Survey</a></h1>
+      <nav class="main-nav" id="main-nav"></nav>
+    </header>
+
+    <section class="section credits">
+  <h2 class="top-title">Crédits</h2>
+  <p class="texte-description">Ce projet a été réalisé en juin 2018, par une classe d'étudiants en 3e année Interactive Media Design de l'EAA La Chaux-de-Fonds.</p>
+
+  <ul class="menu-tasks credits-list">
+    <li>
+      <img src="images/ayl.jpg">
+      <div class="nom">Aylin Basara</div>
+    </li>
+    <li>
+      <img src="images/daph.jpg">
+      <div class="nom">Daphnée Lovas</div>
+    </li>
+    <li>
+      <img src="images/lois.jpg">
+      <div class="nom">Loïs Voirol</div>
+    </li>
+    <li>
+      <img src="images/lou.jpg">
+      <div class="nom">Lou Evard</div>
+    </li>
+    <li>
+      <img src="images/mait.jpg">
+      <div class="nom">Maïtée Schwab</div>
+    </li>
+    <li>
+      <img src="images/mati.jpg">
+      <div class="nom">Mathias Liniger</div>
+    </li>
+    <li>
+      <img src="images/meg.jpg">
+      <div class="nom">Megan Kelly</div>
+    </li>
+    <li>
+      <img src="images/seb.jpg">
+      <div class="nom">Sébastien Lehmann</div>
+    </li>
+    <li>
+      <img src="images/varvara.jpg">
+      <div class="nom">Varvara Dzienis</div>
+    </li>
+    <li>
+      <img src="images/vlad.jpg">
+      <div class="nom">Vladimir Nyström</div>
+    </li>
+    <li style="order: 11">
+      <img src="images/manuel.jpg">
+      <div class="nom">Manuel Schmalstieg</div>
+      <div class="role">enseignant</div>
+    </li>
+  </ul>
+
+</section>
+
+<footer class="section site-footer">
+  <p>Un projet réalisé par les éléves de l'<a href="http://www.eaa-la-chaux-de-fonds.ch/">EAA de La Chaux-de-Fonds</a>. c+p 2018.</p>
+</footer>
+
+<script>
+
+  // Randomize Order
+  // produce a random distribution of 11 numbers.
+  var nombres = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ];
+
+  shuffle(nombres);
+
+  for (var i = 1; i <= nombres.length; i++) {
+
+    // attribuer l'ordre à l'élément html
+    // var Projet = MenuList[i];
+
+    // console.log(nombres[i]);
+    var cible = document.querySelector(".credits-list li:nth-of-type("+[i]+")");
+    cible.style.order = nombres[i];
+    // cible.style.border = "1px solid red";
+
+  }
+
+</script>
+
+</body>
+</html>
