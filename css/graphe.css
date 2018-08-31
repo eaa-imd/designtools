@@ -27,11 +27,15 @@
 
 .legende .couleur {
   width: 1em;
+  flex: 0 0 1em;
   height: 1em;
   background-color: gray;
   border-radius: 100%;
   margin-right: 1em;
   margin-top: 0.5em;
+}
+
+.legende li span {
 }
 
 .legende li:first-of-type {
@@ -66,6 +70,21 @@ Style du graphe
 {
 	stroke: white;
 	stroke-width: 4px;
+}
+
+/*
+
+Affichage du texte dans les tranches du graphe
+
+*/
+
+.ct-chart-donut .ct-label:first-child {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.ct-chart-donut .ct-label:nth-child(1n+7) {
+  display: none;
 }
 
 /*
@@ -191,6 +210,8 @@ en fonction du nombre d'éléments.
 
 .systemes-de-design .ct-slice-donut-solid  { fill: #2932FF; }
 .systemes-de-design li .couleur { background-color : #2932FF; }
+.systemes-de-design .ct-label { fill: #fff; }
+.systemes-de-design .ct-label:nth-child(1n+5) { display: none; }
 
 .communication .ct-slice-donut-solid  { fill: #058D3F; }
 .communication li .couleur { background-color : #058D3F; }
@@ -202,4 +223,5 @@ en fonction du nombre d'éléments.
 .ct-slice-donut-solid:hover {
 /*  fill: #000;
 */  opacity: 1;
+    fill: #ccc;
 }

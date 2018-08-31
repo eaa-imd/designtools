@@ -13,7 +13,7 @@ if (dataArray) {
     var largeur=160;
   }
 
-  dataArray.sort(compareSecondColumn);
+  // dataArray.sort(compareSecondColumn);
 
   var dataLabels = arrayKeys(dataArray);
   var dataChiffres = arrayValues(dataArray);
@@ -30,14 +30,14 @@ if (dataArray) {
     showLabel: true
   });
 
-  legendeAutomatique(dataArray);
+  legendeAutomatique(dataArray, "legende");
 
 }
 
 // Produire la liste visuelle
 
 
-function legendeAutomatique(data) {
+function legendeAutomatique(data,targetID) {
 
   var legendeContenu = '';
 
@@ -61,7 +61,7 @@ function legendeAutomatique(data) {
   var legendeUL = document.createElement("ul");
   legendeUL.className = "liste-legende";
   legendeUL.innerHTML = legendeContenu;
-  document.getElementById("legende").appendChild(legendeUL);
+  document.getElementById(targetID).appendChild(legendeUL);
 
 
 }

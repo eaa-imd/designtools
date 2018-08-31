@@ -6,11 +6,16 @@
   <!-- feuilles de style -->
   <link rel="stylesheet" href="libs/chartist/chartist.min.css">
   <link href="css/base.css" rel="stylesheet" type="text/css">
+  <link href="css/graphe.css" rel="stylesheet" type="text/css">
   <!-- scripts -->
+  <script>
+    var dataArray;
+  </script>
   <script src="js/fonctions.js"></script>
   <script defer src="js/menu.js"></script>
   <script src="libs/chartist/chartist.min.js"></script>
   <script src="participants/data-participants.js"></script>
+  <script src="js/graph.js"></script>
 </head>
 
 <body class="home">
@@ -39,20 +44,82 @@
   </div>
 </section>
 
-<section class="section toolbox">
-	<h2>Les plus populaires</h2>
+<section class="section toolbox" id="toolbox">
+  <h2>Les plus populaires</h2>
   <p class="texte-description">Voici les outils qui dans notre sondage se sont avérés les populaires dans leur domaine.</p>
+  <ul class="menu-tasks menu-best">
+      <li>
+        <img src="images/best/papiercrayon.svg">
+        <div class="categorie">Brainstorming</div>
+        <div class="outil">Papier & Post-its</div>
+      </li>
+      <li>
+        <img src="images/icones/design-interface.svg">
+        <div>Wireframing</div>
+        <div class="outil">Papier</div>
+      </li>
+      <li>
+        <img src="images/best/psd.svg">
+        <div>Design d’interface</div>
+        <div class="outil">Photoshop</div>
+      </li>
+      <li>
+        <img src="images/icones/edition-code.svg">
+        <div>Prototypage</div>
+        <div class="outil">HTML / CSS</div>
+      </li>
+      <li>
+        <img src="images/best/sublimetext.svg">
+        <div>Édition de code</div>
+        <div class="outil">Sublime Text</div>
+      </li>
+      <li>
+        <img src="images/best/wordpress.svg">
+        <div>CMS/frameworks</div>
+        <div class="outil">WordPress</div>
+      </li>
+      <li>
+        <img src="images/best/github.svg">
+        <div>Gestion de version</div>
+        <div class="outil">Github</div>
+      </li>
+      <li>
+        <img src="images/best/sketch.svg">
+        <div>Systèmes de design</div>
+        <div class="outil">Sketch</div>
+      </li>
+      <li>
+        <img src="images/best/slack.svg">
+        <div>Communication</div>
+        <div class="outil">Slack</div>
+      </li>
+    </ul>
 
-<section class="section participants">
+</section>
+
+<section class="section participants" id="participants">
   <h2>Les participants</h2>
 
-  <p class="texte-description">Voici quelques informations statistiques sur les participants au sondage.</p>
+  <p class="texte-description">Voici quelques informations statistiques sur les participants ayant répondu au sondage.</p>
 
-  <div class="charts">
-  <div class="ct-chart ct-square ct-chart-1 brainstorming"></div>
-  <div class="ct-chart ct-square ct-chart-2"></div>
-  <div class="ct-chart ct-square ct-chart-3"></div>
-</div>
+  <div class="charts-index">
+  
+    <section class="section graphe brainstorming">
+      <div class="ct-chart ct-square visuel ct-chart-1"></div>
+      <div class="legende" id="legende-1"><h3>Pays</h3></div>
+    </section>
+
+    <section class="section graphe wireframing">
+      <div class="ct-chart ct-square visuel ct-chart-2"></div>
+      <div class="legende" id="legende-2"><h3>Statut professionnel</h3></div>
+    </section>
+
+    <section class="section graphe cms-frameworks">
+      <div class="ct-chart ct-square visuel ct-chart-3"></div>
+      <div class="legende" id="legende-3"><h3>Âge</h3></div>
+    </section>    
+
+  </div>
   <script>
 
   new Chartist.Pie('.ct-chart-1', {
@@ -67,7 +134,7 @@
     showLabel: true
   });
 
-
+  legendeAutomatique(dataPays, "legende-1");
 
   new Chartist.Pie('.ct-chart-2', {
 
@@ -80,6 +147,8 @@
     startAngle: 270,
     showLabel: true
   });
+
+  legendeAutomatique(dataCompany, "legende-2");
 
 
   new Chartist.Pie('.ct-chart-3', {
@@ -94,11 +163,21 @@
     showLabel: true
   });
 
+  legendeAutomatique(dataAges, "legende-3");
+
   </script>
 </section>
 
+<section class="section credits" id="credits">
+  <h2>Crédits</h2>
+  <p class="texte-description">Ce projet a été réalisé en mai-juin 2018, par une classe d'étudiants en 3e année Interactive Media Design de l'EAA La Chaux-de-Fonds. Merci à tous les participants pour leurs réponses, et à Thibaud Tissaut et Nadia dalla Costa pour leur soutien.</p>
+ 
+  <a href="credits/">Liste des élèves participants</a>
+
+</section>
+
 <footer class="section site-footer">
-  <p>un projet réalisé par les éléves de l'EAA de La Chaux-de-Fonds</p>
+  <p>Un projet réalisé par les éléves de l'<a href="http://www.eaa-la-chaux-de-fonds.ch/">EAA La Chaux-de-Fonds</a>. c+p 2018.</p>
 </footer>
 
 <script>

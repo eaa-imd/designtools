@@ -75,18 +75,20 @@ function InsertMenu() {
 </label>
 <input type="checkbox" id="menu-toggle"/>
 <ul id="menu" class="menu">
-  <li class="auto-menu"><a href="#">tasks</a>
-  <ul class="menu-tasks">`;
+  <li class="auto-menu">
+    <h2>Les outils du design</h2>
+    <ul class="menu-tasks">`;
 
   menuContent += ProduceMenu();
 
   menuContent += `</ul>
 
-  </li>
+  </li><!-- .auto-menu -->
     
-  <li><a href="#">Toolbox</a></li>
-  <li><a href="#">Participants</a></li>
-</ul>`;
+  <li><h2><a class="menu-title" href="/#toolbox">Toolbox</a></h2></li>
+  <li><h2><a class="menu-title" href="/#participants">Participants</a></h2></li>
+  <li><h2><a class="menu-title" href="/credits/">Credits</a></h2></li>
+</ul><!-- .menu -->`;
 
  menuContainer.innerHTML = menuContent;
 
